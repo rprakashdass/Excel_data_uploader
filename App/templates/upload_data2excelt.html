@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    Data to ExcelSheet
+{% endblock %}
+
+{% block content %}
+    <div class="center">
+        <p>This is upload_data2excelt.html</p>
+        <label for="nofdata"> Enter the No of Data You have!! </label>
+        <input type="number" name="nofdata" value="" oninput="display(this.value)">
+        <br>
+        <label for="input"> Enter the input one by one </label>
+        <input type="text">
+    </div>
+    <div class="border" >
+        <p>No_of_data : <span id="display_input" ></span> </p>
+    </div>
+{% endblock %}

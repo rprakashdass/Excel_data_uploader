@@ -1,4 +1,4 @@
-import openpyxl, xlsxwriter
+import xlsxwriter
 
 wb = xlsxwriter.Workbook('Guys.xlsx')
 ws = wb.add_worksheet()

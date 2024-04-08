@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    Passage Uploader
+{% endblock %}
+
+{% block content %}
+    <section class="left-section" >
+        <div> 
+            <form method="post" action="{{ url_for('passage2excel' ) }}" onsubmit="event => {event.preventDefault();}">
+                <input type="number" id="nofrow" name="nofrow" value="1">
+                <input type="number" id="nofcol" name="nofcol" value="1">
+                <input type="number" id="nofsep" name="nofsep" value="1">
+                <!-- <button name="nodataform" id="nodataform"  type="submit">Enter</button> -->
+                <br>
+                <small>*Leave for 0 as default value</small>
+            <!-- </form> -->
+        </div>
+    </section>
+    <section class="right-section">
+        <div>
+            <!-- <form method="post" action="{{ url_for('passage2excel' ) }}"> -->
+                <textarea id="data" name="data" ></textarea>
+                <br>
+                <input name="dataform" type="submit"> </input>
+            </form>
+        </div>
+    </section>
+{% endblock %}

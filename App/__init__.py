@@ -22,9 +22,15 @@ def create_app(test_config=None):
 
     from . import main
     from . import upload_data2excel
+    from . import passage2excel
+    
     app.register_blueprint(main.bp)
     app.register_blueprint(upload_data2excel.bp)
+    app.register_blueprint(passage2excel.bp)
+    
+    # app.register_blueprint(after_upload.bp)
     app.add_url_rule('/', endpoint='index')
     app.add_url_rule('/upload_data2excel/', endpoint='upload_data2excel')
-
+    app.add_url_rule('/after_upload//', endpoint='upload')
+    app.add_url_rule('/passage2excel/', endpoint='passage2excel')
     return app

@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    Data to Excel
+{% endblock %}
+
+{% block left_section %}
+    <section class="left-section">
+        <div style="margin-left: 100px;" >
+            <h2>Enter the data</h2>
+            <form method="post" action="{{ url_for('upload') }}" onsubmit="get_data(this)">
+                <textarea type="text" id="input_data" name="input_data"></textarea>
+                <br><br>
+                <button type="submit">Upload</button>
+            </form>
+            <br>
+            <button onclick="" >Finish uploading!! </button>
+        </div>
+    </section>
+{% endblock %}
+
+{% block right_section %}
+    <section class="right-section">
+        <h2>Past Input</h2>
+        <div class="live-input-box">
+            <textarea id="pastData"> </textarea>
+        </div>
+    </section>
+{% endblock %}
